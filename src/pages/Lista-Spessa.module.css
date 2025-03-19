@@ -6,6 +6,7 @@ li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
 }
 
 .customList {
@@ -25,8 +26,19 @@ li {
 .list {
     font-size: 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+}
+
+.addButton {
+    display: flex;
+    gap: 5px;
+    padding: 5px 5px;
+}
+
+.cart {
+    width: 15px;
+    height: auto;
 }

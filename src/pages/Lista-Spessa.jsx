@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './Lista-Spessa.module.css';
+import groseryCart from '../../public/carrito-de-compras.png';
 
 export default function ListaDellaSpessa() {
 
@@ -13,6 +14,8 @@ export default function ListaDellaSpessa() {
 
     const [product, setProduct] = useState(products);
 
+    const [addProduct, AddedProducts] = useState([])
+
     return (
         <section className={style.customList}>
 
@@ -25,14 +28,17 @@ export default function ListaDellaSpessa() {
                     <div key={i} className={style.list}>
 
                         <ul>
-                            <li>{p.name}</li>
+                            <li>Prodotto: {p.name}</li>
                         </ul>
 
 
                         <ul>
-                            <li>{p.price} €</li>
+                            <li>Prezzo: {p.price} €</li>
                         </ul>
 
+                        <button className={style.addButton}>Aggiungi
+                            <img className={style.cart} src={groseryCart} alt="grosery cart" />
+                        </button>
                     </div>
                 );
             })}
